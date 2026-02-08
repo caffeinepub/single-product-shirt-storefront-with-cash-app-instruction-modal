@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Update the storefront product to be labeled as a preorder and change the displayed price to $45 everywhere in the UI.
+**Goal:** Show an updates notice at the very top of the storefront on first load and ensure the email address is not displayed anywhere in the UI.
 
 **Planned changes:**
-- Update all UI price displays from "$25" to "$45" on the product page.
-- Update the Cash App instructions modal to show "$45" in every place the amount appears (including any reminder/note text).
-- Add a visible "Preorder" label on the product page and adjust the primary purchase call-to-action wording to reflect preorder status.
+- Add a top-of-page notice above the existing header on the main storefront (single product page) with the exact text: “Customers will receive updates when the product drops and when their preorder has been shipped.”
+- Remove the string “sincerelykilla@icloud.com” from all user-facing frontend UI locations (including header, main content, footer, and the Cash App instructions modal).
 
-**User-visible outcome:** The product page shows the item as a preorder with a $45 price, and the Cash App instructions consistently reference a $45 payment amount.
+**User-visible outcome:** Visitors immediately see the updates notice at the top of the storefront, and no email address is shown anywhere on the site.

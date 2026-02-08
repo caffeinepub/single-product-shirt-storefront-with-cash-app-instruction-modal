@@ -1,54 +1,54 @@
 {
   "kind": "build_request",
-  "title": "Update storefront to Preorder and change price to $45",
+  "title": "Add top-of-page updates notice and ensure no email address is shown",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-5",
-      "text": "Update the product price from $25 to $45 everywhere it is shown in the UI, including the main product page price display and the Cash App instructions modal amount text.",
+      "id": "REQ-7",
+      "text": "Add a notice at the very top of the storefront (visible immediately on first load) with the exact text: “Customers will receive updates when the product drops and when their preorder has been shipped.”",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-msg-1"
+          "msg-10",
+          "msg-12"
         ],
         "quotes": [
-          "Make the product say preorder and make the product 45$"
+          "use:\n\n“Customers will receive updates when the product drops and when their preorder has been shipped.”\n\nI want it place at soon at you open the website",
+          "Build"
         ]
       },
       "acceptanceCriteria": [
-        "On the product page, the displayed price reads \"$45\" (and not \"$25\").",
-        "In the Cash App instructions modal, the displayed payment amount reads \"$45\" in all places it appears (amount section and any note/reminder text).",
-        "No \"$25\" price text remains visible in the app UI."
+        "When the page first loads, the notice is visible without any user interaction and appears above the existing header content.",
+        "The notice text matches exactly: “Customers will receive updates when the product drops and when their preorder has been shipped.”",
+        "The notice is shown on the main storefront page (the single product page)."
       ]
     },
     {
-      "id": "REQ-6",
-      "text": "Label the product as a preorder on the product page, and ensure any purchase call-to-action messaging reflects that it is a preorder (e.g., button label and/or nearby helper text).",
+      "id": "REQ-8",
+      "text": "Do not display the email address “sincerelykilla@icloud.com” anywhere in the UI (including header, main content, footer, and the Cash App instructions modal). If the email address exists in any frontend user-facing strings, remove it.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-msg-1"
+          "msg-13"
         ],
         "quotes": [
-          "Make the product say preorder and make the product 45$"
+          "I don’t want it shown at all"
         ]
       },
       "acceptanceCriteria": [
-        "A visible \"Preorder\" label is shown alongside the product on the main product page (e.g., near the product title).",
-        "The primary purchase call-to-action reflects preorder status (e.g., \"Preorder\" / \"Preorder Now\" instead of \"Buy Now\", or equivalent wording).",
-        "User-facing preorder wording is in English."
+        "The string “sincerelykilla@icloud.com” does not appear anywhere in the rendered UI.",
+        "No new UI elements are added that show an email address."
       ]
     }
   ],
   "constraints": [
-    "Do not edit any files under frontend/src/components/ui or other paths listed as immutable in SYSTEM_CONTEXT.",
-    "Keep the backend as a single-actor Motoko canister; no backend changes are required for this UI-only update.",
-    "Continue using the existing uploaded product images exactly as provided."
+    "Frontend must remain React + TypeScript with Tailwind and existing UI component composition; do not edit files under frontend/src/components/ui (read-only).",
+    "Do not modify frontend immutable hook/entry files (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
+    "Backend remains single-actor Motoko; no backend changes are required for this request."
   ],
   "nonGoals": [
-    "Adding direct Cash App integration or any automated payment processing.",
-    "Adding a multi-product catalog, cart, inventory, or checkout flow.",
-    "Changing product images or generating new product photography."
+    "Implementing email sending, subscriptions, mailing lists, or any outbound email functionality.",
+    "Adding new payment integrations beyond the existing manual Cash App instructions flow."
   ],
   "imageRequirements": {
     "required": [],
@@ -57,7 +57,9 @@
   "userProfileUpdate": {
     "goalsToAdd": [],
     "goalsToRemove": [],
-    "preferencesToAdd": [],
+    "preferencesToAdd": [
+      "Do not display the email address on the website."
+    ],
     "preferencesToRemove": [],
     "miscToAdd": [],
     "miscToRemove": [],

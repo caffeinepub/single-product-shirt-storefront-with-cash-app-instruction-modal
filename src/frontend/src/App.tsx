@@ -31,6 +31,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      {/* Notice Banner */}
+      <div className="bg-primary text-primary-foreground py-3 px-4 text-center">
+        <p className="text-sm md:text-base font-medium">
+          Customers will receive updates when the product drops and when their preorder has been shipped.
+        </p>
+      </div>
+
       {/* Header */}
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-6">

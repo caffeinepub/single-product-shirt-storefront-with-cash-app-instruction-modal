@@ -1,42 +1,41 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Storefront: update price to $45 and label as Preorder",
+  "title": "Storefront top notice + remove email from UI",
   "requirements": [
     {
-      "id": "REQ-5",
-      "summary": "Update displayed product price to $45 everywhere in the UI, including the product page and Cash App instructions modal.",
+      "id": "REQ-7",
+      "summary": "Add a top-of-page notice banner above the existing header with the exact updates message.",
       "acceptanceCriteria": [
-        "On the product page, the displayed price reads \"$45\" (and not \"$25\").",
-        "In the Cash App instructions modal, the displayed payment amount reads \"$45\" in all places it appears (amount section and any note/reminder text).",
-        "No \"$25\" price text remains visible in the app UI."
+        "When the page first loads, the notice is visible without any user interaction and appears above the existing header content.",
+        "The notice text matches exactly: “Customers will receive updates when the product drops and when their preorder has been shipped.”",
+        "The notice is shown on the main storefront page (the single product page)."
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Change the main product price display from \"$25\" to \"$45\" and ensure any other user-visible price text on the product page reflects $45. Continue using the existing shadcn-ui Button for the CTA; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/CashAppInstructionsModal.tsx",
-          "operation": "modify",
-          "description": "Update the Cash App instructions modal amount text from \"$25\" to \"$45\" (including the Amount section and the Important note/reminder). Continue using the existing shadcn-ui Dialog and Button components; verify the component's usage instructions before implementing."
+          "description": "Insert a full-width notice bar as the first rendered element inside the top-level container (above the existing header) with the exact required text, styled with existing Tailwind classes so it is clearly visible on first load."
         }
       ]
     },
     {
-      "id": "REQ-6",
-      "summary": "Add a visible Preorder label on the product page and update the primary call-to-action messaging to reflect preorder status.",
+      "id": "REQ-8",
+      "summary": "Ensure the specified email address is not present in any user-facing UI strings, including the Cash App instructions modal.",
       "acceptanceCriteria": [
-        "A visible \"Preorder\" label is shown alongside the product on the main product page (e.g., near the product title).",
-        "The primary purchase call-to-action reflects preorder status (e.g., \"Preorder\" / \"Preorder Now\" instead of \"Buy Now\", or equivalent wording).",
-        "User-facing preorder wording is in English."
+        "The string “sincerelykilla@icloud.com” does not appear anywhere in the rendered UI.",
+        "No new UI elements are added that show an email address."
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Add a clear \"Preorder\" label near the product title and update the primary CTA button text to preorder wording (e.g., \"Preorder Now\"). Update adjacent helper text to reflect preorder context while preserving the existing images and layout. Continue using the existing shadcn-ui Button for the CTA; verify the component's usage instructions before implementing."
+          "description": "Audit all user-facing strings in the storefront page (header/main/footer) and remove/replace any occurrence of “sincerelykilla@icloud.com” so it is never rendered."
+        },
+        {
+          "path": "frontend/src/components/CashAppInstructionsModal.tsx",
+          "operation": "modify",
+          "description": "Audit all modal copy and remove/replace any occurrence of “sincerelykilla@icloud.com” so the email address is not shown anywhere in the Cash App instructions modal."
         }
       ]
     }

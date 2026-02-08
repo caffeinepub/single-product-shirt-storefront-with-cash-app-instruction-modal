@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T03:09:33.165Z",
+  "generatedAt": "2026-02-08T03:20:08.814Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,24 +11,23 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-5",
-        "summary": "Update the product price from $25 to $45 everywhere it is shown in the UI, including the main product page price display and the Cash App instructions modal amount text.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/CashAppInstructionsModal.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/CashAppInstructionsModal.tsx"
-        ]
-      },
-      {
-        "id": "REQ-6",
-        "summary": "Label the product as a preorder on the product page, and ensure any purchase call-to-action messaging reflects that it is a preorder (e.g., button label and/or nearby helper text).",
+        "id": "REQ-7",
+        "summary": "Add a notice at the very top of the storefront (visible immediately on first load) with the exact text: “Customers will receive updates when the product drops and when their preorder has been shipped.”",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Do not display the email address “sincerelykilla@icloud.com” anywhere in the UI (including header, main content, footer, and the Cash App instructions modal). If the email address exists in any frontend user-facing strings, remove it.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/CashAppInstructionsModal.tsx"
         ],
         "matchedFiles": [
           "frontend/src/App.tsx"
@@ -38,12 +37,10 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/App.tsx",
-    "frontend/src/components/CashAppInstructionsModal.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

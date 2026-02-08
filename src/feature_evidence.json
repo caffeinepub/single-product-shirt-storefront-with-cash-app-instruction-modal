@@ -2,27 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-product-price-from-25-to-45-everywhere-it-is-shown-in-the-ui-including-the-main-product-page-price-display-and-the-cash-app-instructions-modal-amount-text",
-      "featureTitle": "Update the product price from $25 to $45 everywhere it is shown in the UI, including the main product page price display and the Cash App instructions modal amount text.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/CashAppInstructionsModal.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-label-the-product-as-a-preorder-on-the-product-page-and-ensure-any-purchase-call-to-action-messaging-reflects-that-it-is-a-preorder-e-g-button-label-and-or-nearby-helper-text",
-      "featureTitle": "Label the product as a preorder on the product page, and ensure any purchase call-to-action messaging reflects that it is a preorder (e.g., button label and/or nearby helper text).",
+      "featureId": "feature-add-a-notice-at-the-very-top-of-the-storefront-visible-immediately-on-first-load-with-the-exact-text-customers-will-receive-updates-when-the-product-drops-and-when-their-preorder-has-been-shipped",
+      "featureTitle": "Add a notice at the very top of the storefront (visible immediately on first load) with the exact text: “Customers will receive updates when the product drops and when their preorder has been shipped.”",
       "files": [
         "frontend/src/App.tsx"
       ],
@@ -34,7 +15,25 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-6"
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-do-not-display-the-email-address-sincerelykilla-icloud-com-anywhere-in-the-ui-including-header-main-content-footer-and-the-cash-app-instructions-modal-if-the-email-address-exists-in-any-frontend-user-facing-strings-remove-it",
+      "featureTitle": "Do not display the email address “sincerelykilla@icloud.com” anywhere in the UI (including header, main content, footer, and the Cash App instructions modal). If the email address exists in any frontend user-facing strings, remove it.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
       ],
       "confidence": "high"
     }

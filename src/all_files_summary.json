@@ -1,15 +1,15 @@
 {
-  "backend/main.mo": "Empty Motoko actor with no methods or logic.",
-  "feature_evidence.json": "Feature evidence report mapping two UI feature updates to affected frontend files and components.",
-  "frontend-file-summaries.txt": "Prewritten summaries describing core frontend files including App, Cash App modal, global styles, and Tailwind config.",
-  "frontend/index.css": "Tailwind base layer defining CSS variables for light/dark themes and global background/text styling.",
-  "frontend/index.html": "HTML entrypoint mounting the React app and loading main.tsx.",
-  "frontend/src/App.tsx": "Main storefront UI with product gallery, preorder badge, pricing, and modal trigger for Cash App instructions.",
-  "frontend/src/components/CashAppInstructionsModal.tsx": "Modal showing step-by-step Cash App payment instructions with copy-to-clipboard and Escape key support.",
-  "frontend/src/hooks/useActor.ts": "React hook creating and refreshing a backend actor based on Internet Identity authentication state.",
-  "frontend/src/hooks/useInternetIdentity.ts": "Authentication context and provider managing Internet Identity login, stored identities, and auth client setup.",
-  "frontend/src/index.css": "Frontend-specific Tailwind theme variables and global styles for light/dark mode with a monochrome aesthetic.",
-  "frontend/src/main.tsx": "Root React entrypoint that initializes QueryClient, InternetIdentityProvider, and renders App.",
-  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, typography, animations, container settings, and plugins for typography, container queries, and animations.",
-  "project_state.json": "Defines the project’s current state, including storefront description, requirements, issues, and pending feature requests for a single-product preorder site."
+  "backend/main.mo": "Empty Motoko actor placeholder with no methods.",
+  "feature_evidence.json": "Feature evidence report mapping two UI requirements to the App.tsx file and related components.",
+  "frontend-file-summaries.txt": "Stored summaries describing key frontend files such as App.tsx, CashApp modal, global styles, and Tailwind config.",
+  "frontend/index.css": "Tailwind base stylesheet defining extensive color tokens and theming for light and dark modes.",
+  "frontend/index.html": "Basic HTML shell containing the root div and loading the main React entrypoint.",
+  "frontend/src/App.tsx": "Main storefront page with a top notice banner, product gallery, and a preorder button that opens the Cash App modal.",
+  "frontend/src/components/CashAppInstructionsModal.tsx": "Modal guiding users through sending a $45 Cash App payment, including copy-to-clipboard and Escape key handling.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages a backend actor instance tied to Internet Identity authentication.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context provider and hooks for managing Internet Identity login, stored identities, and auth lifecycle.",
+  "frontend/src/index.css": "Tailwind stylesheet defining refined monochrome light and dark themes and base typography utilities.",
+  "frontend/src/main.tsx": "React entrypoint initializing QueryClient, Internet Identity provider, and rendering the App component.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, custom colors, animations, fonts, container settings, and typography/container-queries/animate plugins.",
+  "project_state.json": "Defines the project’s current storefront requirements, features, constraints, and metadata for a preorder shirt site using manual Cash App payment."
 }

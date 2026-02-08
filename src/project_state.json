@@ -1,10 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Website storefront for a single shirt priced at $45, using two provided images (front/back) and a Buy Now button that opens a popup modal with Cash App payment instructions; product is labeled as a preorder.",
+  "projectStateVersion": 7,
+  "summary": "Website storefront for a single shirt priced at $45, using two provided images (front/back) and a Buy Now button that opens a popup modal with Cash App payment instructions; product is labeled as a preorder; add a top-of-page notice that customers will receive updates when the product drops and when their preorder has been shipped (no email shown).",
   "architectural_notes": [
     "Single-page product site (no multi-page shop).",
-    "Payment is manual via Cash App instructions shown in a popup modal; no direct payment integration."
+    "Payment is manual via Cash App instructions shown in a popup modal; no direct payment integration.",
+    "No email sending/collection features; only static text content (do not display the provided email address)."
   ],
   "known_issues": [
     "Direct Cash App payment integration is not supported; only manual payment instructions can be provided."
@@ -58,6 +59,22 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-notice-at-the-very-top-of-the-storefront-visible-immediately-on-first-load-with-the-exact-text-customers-will-receive-updates-when-the-product-drops-and-when-their-preorder-has-been-shipped",
+      "title": "Add a notice at the very top of the storefront (visible immediately on first load) with the exact text: “Customers will receive updates when the product drops and when their preorder has been shipped.”",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-do-not-display-the-email-address-sincerelykilla-icloud-com-anywhere-in-the-ui-including-header-main-content-footer-and-the-cash-app-instructions-modal-if-the-email-address-exists-in-any-frontend-user-facing-strings-remove-it",
+      "title": "Do not display the email address “sincerelykilla@icloud.com” anywhere in the UI (including header, main content, footer, and the Cash App instructions modal). If the email address exists in any frontend user-facing strings, remove it.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -82,6 +99,12 @@
     {
       "id": "AR-4",
       "summary": "Label the product as a preorder on the product page (and anywhere the product name/CTA appears if applicable).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add a notice at the very top of the page on first load: “Customers will receive updates when the product drops and when their preorder has been shipped.” (Do not display any email address.)",
       "reqIds": [],
       "status": "pending"
     }
