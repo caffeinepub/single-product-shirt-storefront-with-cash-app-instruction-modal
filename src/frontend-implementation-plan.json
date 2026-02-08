@@ -1,0 +1,98 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Single-product shirt storefront with Cash App instruction modal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a single, visible product storefront page for one shirt priced at $25 with a primary “Buy Now” CTA.",
+      "acceptanceCriteria": [
+        "The app has a single visible product page (no additional pages required).",
+        "The page clearly displays the product price as \"$25\".",
+        "The page includes a primary call-to-action button labeled \"Buy Now\"."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page storefront UI (product title/description area, price \"$25\", and primary \"Buy Now\" button) with a responsive layout (no additional routes/pages)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add the two uploaded shirt images as static assets and present them as front/back product photos on the product page.",
+      "acceptanceCriteria": [
+        "Both uploaded images (Photoroom_20260118_154454.jpeg and Photoroom_20260118_154454-1.jpeg) are included as static frontend assets and render on the product page.",
+        "Users can view both images as front/back product photos (e.g., gallery, carousel, or selectable thumbnails).",
+        "No visual edits are applied to the images (cropping/resizing for layout is allowed, but the image content must not be altered)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/Photoroom_20260118_154454.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded front-view product image as a static public asset (ensure content is unchanged; only rendered sizing is allowed)."
+        },
+        {
+          "path": "frontend/public/assets/Photoroom_20260118_154454-1.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded back-view product image as a static public asset (ensure content is unchanged; only rendered sizing is allowed)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the two static images into the product page as a simple front/back gallery (e.g., selectable thumbnails that swap the main image) and ensure both render clearly on mobile and desktop."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement a “Buy Now” modal popup with manual Cash App instructions to send $25 to $bslimeballin and a post-payment fulfillment note.",
+      "acceptanceCriteria": [
+        "Clicking the \"Buy Now\" button opens a modal (not a separate page).",
+        "The modal text instructs the user to send exactly $25 to Cash App cashtag \"$bslimeballin\".",
+        "The modal includes a clear note that the product will be sent after payment is received.",
+        "The modal provides a close action (e.g., X button and/or Close button) and can be dismissed via Escape key.",
+        "No claim is made that the app performs direct Cash App payment processing."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CashAppInstructionsModal.tsx",
+          "operation": "create",
+          "description": "Create a reusable modal component that renders manual payment instructions (send exactly \"$25\" to Cash App cashtag \"$bslimeballin\"), includes an explicit note that the product ships after payment is received, and supports close controls plus Escape-key dismissal (no claims of direct Cash App processing)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Connect the \"Buy Now\" button to open the CashAppInstructionsModal, manage open/close state, and ensure the modal is an overlay popup rather than a new page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a distinctive streetwear theme with consistent palette, typography, spacing, and responsive behavior across the page and modal (avoid default gradient look).",
+      "acceptanceCriteria": [
+        "The product page and modal share a consistent visual style (colors, type scale, button styling).",
+        "The theme does not rely on a blue/purple gradient default aesthetic.",
+        "The layout is responsive and remains usable on mobile widths."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles to establish the streetwear theme (consistent color palette, typography scale, spacing, and button/overlay basics), explicitly avoiding a blue/purple gradient default aesthetic; ensure mobile-friendly base styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Align layout and UI styling with the global theme (type scale, spacing rhythm, button styling) and ensure responsive behavior for the product gallery and modal content on narrow screens."
+        },
+        {
+          "path": "frontend/src/components/CashAppInstructionsModal.tsx",
+          "operation": "modify",
+          "description": "Apply the same theme tokens/styles used by the product page to the modal (overlay, card surface, typography, and buttons) so both feel cohesive and distinctive."
+        }
+      ]
+    }
+  ]
+}

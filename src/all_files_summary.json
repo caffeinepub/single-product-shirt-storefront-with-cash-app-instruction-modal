@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report mapping features to relevant frontend files and components.",
+  "frontend-file-summaries.txt": "Text summaries of key frontend files including App, modal component, global styles, and Tailwind config.",
+  "frontend/index.css": "Tailwind base and theme variables for light/dark modes with custom color tokens.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Main storefront page with image gallery, product details, and Buy Now modal trigger.",
+  "frontend/src/components/CashAppInstructionsModal.tsx": "Modal showing Cash App payment steps with copy-to-clipboard support and Escape-to-close.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and refreshes a backend actor based on Internet Identity authentication.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity auth state, login, and identity loading.",
+  "frontend/src/index.css": "Global Tailwind styling defining monochrome streetwear theme for light/dark modes.",
+  "frontend/src/main.tsx": "React entry point initializing providers and rendering App.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration enabling dark mode, custom colors, spacing, typography, animations, and plugins like typography, container queries, and animate.",
+  "project_state.json": "Defines the project’s state for a single-product storefront with Cash App payment instructions, including features, issues, and metadata."
+}

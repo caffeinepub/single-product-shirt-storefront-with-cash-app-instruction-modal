@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Website storefront for a single shirt priced at $25, using two provided images (front/back) and a Buy Now button that opens a popup modal with Cash App payment instructions.",
+  "architectural_notes": [
+    "Single-page product site (no multi-page shop).",
+    "Payment is manual via Cash App instructions shown in a popup modal; no direct payment integration."
+  ],
+  "known_issues": [
+    "Direct Cash App payment integration is not supported; only manual payment instructions can be provided."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-product-page-storefront-to-sell-one-shirt-for-25",
+      "title": "Create a single product page storefront to sell one shirt for $25.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-two-uploaded-images-exactly-as-provided-as-the-product-photos-front-and-back-views",
+      "title": "Use the two uploaded images exactly as provided as the product photos (front and back views).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-buy-now-interaction-that-opens-a-popup-modal-with-manual-cash-app-payment-instructions-to-send-25-to-bslimeballin-and-a-statement-that-the-product-will-be-sent-after-payment-is-received",
+      "title": "Implement a “Buy Now” interaction that opens a popup modal with manual Cash App payment instructions to send $25 to $bslimeballin and a statement that the product will be sent after payment is received.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-distinctive-visual-theme-appropriate-for-a-streetwear-product-page-avoid-default-template-look-using-a-consistent-color-palette-typography-and-spacing-across-the-page-and-modal",
+      "title": "Apply a coherent, distinctive visual theme appropriate for a streetwear product page (avoid default template look), using a consistent color palette, typography, and spacing across the page and modal.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a single product page to sell one shirt for $25 using the two uploaded images as front/back photos.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a \"Buy Now\" button that opens a popup modal showing manual Cash App payment instructions to send $25 to $bslimeballin and that the product will be sent after payment.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Single-product shirt storefront with Cash App instruction modal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
