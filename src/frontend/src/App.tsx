@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CashAppInstructionsModal from './components/CashAppInstructionsModal';
 import { Button } from './components/ui/button';
+import { Badge } from './components/ui/badge';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function App() {
@@ -110,9 +111,14 @@ export default function App() {
           {/* Product Details */}
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-                Exclusive Statement Tee
-              </h2>
+              <div className="flex items-center gap-3">
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                  Exclusive Statement Tee
+                </h2>
+                <Badge variant="secondary" className="text-sm font-semibold px-3 py-1">
+                  Preorder
+                </Badge>
+              </div>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 A bold statement piece that speaks volumes. This premium tee features unique graphics on both front and back, crafted for those who wake up ready to make moves.
               </p>
@@ -120,7 +126,7 @@ export default function App() {
 
             <div className="space-y-2">
               <div className="flex items-baseline gap-2">
-                <span className="text-5xl font-bold">$25</span>
+                <span className="text-5xl font-bold">$45</span>
                 <span className="text-muted-foreground">USD</span>
               </div>
               <p className="text-sm text-muted-foreground">Free shipping included</p>
@@ -132,10 +138,10 @@ export default function App() {
                 size="lg"
                 className="w-full text-lg h-14 font-semibold"
               >
-                Buy Now
+                Preorder Now
               </Button>
               <p className="text-xs text-center text-muted-foreground">
-                Secure payment via Cash App • Ships within 3-5 business days
+                Secure payment via Cash App • Expected to ship within 3-5 business days after launch
               </p>
             </div>
 

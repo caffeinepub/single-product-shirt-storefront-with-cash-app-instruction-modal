@@ -1,6 +1,6 @@
 {
-  "frontend/src/App.tsx": "Main single-page product storefront featuring an image gallery with front/back views, product details, pricing at $25, and a Buy Now button that opens the Cash App payment modal.",
-  "frontend/src/components/CashAppInstructionsModal.tsx": "Reusable modal component that displays step-by-step Cash App payment instructions to send $25 to $bslimeballin, with copy-to-clipboard functionality and Escape key dismissal.",
+  "frontend/src/App.tsx": "Main single-page product storefront featuring an image gallery with front/back views, product details with a \"Preorder\" badge, pricing at $45, and a \"Preorder Now\" button that opens the Cash App payment modal.",
+  "frontend/src/components/CashAppInstructionsModal.tsx": "Reusable modal component that displays step-by-step Cash App payment instructions to send $45 to $bslimeballin for preorders, with copy-to-clipboard functionality and Escape key dismissal.",
   "frontend/src/index.css": "Global styles establishing a clean monochrome streetwear theme with high contrast in both light and dark modes, avoiding default gradient aesthetics.",
   "frontend/tailwind.config.js": "Tailwind configuration with customized color tokens, border radius, and typography settings aligned with the minimalist streetwear aesthetic."
 }

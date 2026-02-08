@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Website storefront for a single shirt priced at $25, using two provided images (front/back) and a Buy Now button that opens a popup modal with Cash App payment instructions.",
+  "projectStateVersion": 5,
+  "summary": "Website storefront for a single shirt priced at $45, using two provided images (front/back) and a Buy Now button that opens a popup modal with Cash App payment instructions; product is labeled as a preorder.",
   "architectural_notes": [
     "Single-page product site (no multi-page shop).",
     "Payment is manual via Cash App instructions shown in a popup modal; no direct payment integration."
@@ -42,6 +42,22 @@
         "REQ-4"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-product-price-from-25-to-45-everywhere-it-is-shown-in-the-ui-including-the-main-product-page-price-display-and-the-cash-app-instructions-modal-amount-text",
+      "title": "Update the product price from $25 to $45 everywhere it is shown in the UI, including the main product page price display and the Cash App instructions modal amount text.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-label-the-product-as-a-preorder-on-the-product-page-and-ensure-any-purchase-call-to-action-messaging-reflects-that-it-is-a-preorder-e-g-button-label-and-or-nearby-helper-text",
+      "title": "Label the product as a preorder on the product page, and ensure any purchase call-to-action messaging reflects that it is a preorder (e.g., button label and/or nearby helper text).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -54,6 +70,18 @@
     {
       "id": "AR-2",
       "summary": "Add a \"Buy Now\" button that opens a popup modal showing manual Cash App payment instructions to send $25 to $bslimeballin and that the product will be sent after payment.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Update product price from $25 to $45 across the storefront (page + modal text if applicable).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Label the product as a preorder on the product page (and anywhere the product name/CTA appears if applicable).",
       "reqIds": [],
       "status": "pending"
     }

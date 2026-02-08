@@ -21,7 +21,7 @@ export default function CashAppInstructionsModal({
 }: CashAppInstructionsModalProps) {
   const [copied, setCopied] = useState(false);
   const cashtag = '$bslimeballin';
-  const amount = '$25';
+  const amount = '$45';
 
   const handleCopy = async () => {
     try {
@@ -50,10 +50,10 @@ export default function CashAppInstructionsModal({
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold flex items-center gap-2">
             <DollarSign className="w-6 h-6 text-primary" />
-            Complete Your Purchase
+            Complete Your Preorder
           </DialogTitle>
           <DialogDescription className="text-base pt-2">
-            Follow these simple steps to complete your order
+            Follow these simple steps to secure your order
           </DialogDescription>
         </DialogHeader>
 
@@ -128,7 +128,7 @@ export default function CashAppInstructionsModal({
               <div className="flex-1 space-y-2">
                 <h3 className="font-semibold">Confirmation</h3>
                 <p className="text-sm text-muted-foreground">
-                  Once payment is received, your product will be shipped within 3-5 business days. You'll receive tracking information via the contact details provided.
+                  Once payment is received, your preorder will be confirmed. Your product will be shipped within 3-5 business days after launch. You'll receive tracking information via the contact details provided.
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function CashAppInstructionsModal({
             <p className="text-sm font-medium mb-1">📦 Important</p>
             <p className="text-sm text-muted-foreground">
               Please ensure you send exactly <strong className="text-foreground">{amount}</strong> to{' '}
-              <strong className="text-foreground">{cashtag}</strong>. Your order will be processed after payment confirmation.
+              <strong className="text-foreground">{cashtag}</strong>. Your preorder will be confirmed after payment is received.
             </p>
           </div>
         </div>
